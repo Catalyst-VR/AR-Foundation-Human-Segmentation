@@ -203,6 +203,15 @@ namespace UnityEngine.XR.ARFoundation.Samples
             LoadScene("ObjectTracking");
         }
 
+        public void CPUImageALTFaceButtonPressed()
+        {
+            LoadScene("CPUImages_ALT_Facetracking");
+        }
+        public void CPUImageALTButtonPressed()
+        {
+            LoadScene("CPUImages_ALT");
+        }
+
         public void PlaneOcclusionButtonPressed()
         {
             LoadScene("PlaneOcclusion");

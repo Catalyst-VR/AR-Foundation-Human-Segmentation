@@ -102,6 +102,14 @@ namespace UnityEngine.XR.ARFoundation.Samples
         }
 
         [SerializeField]
+        Button m_CPUImagesALT;
+        public Button cpuImagesALT
+        {
+            get => m_CPUImagesALT;
+            set => m_CPUImagesALT = value;
+        }
+
+        [SerializeField]
         Button m_PlaneOcclusion;
         public Button planeOcclusion
         {
