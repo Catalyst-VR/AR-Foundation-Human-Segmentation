@@ -11,6 +11,11 @@ namespace UnityEngine.XR.ARFoundation.Samples
     /// </summary>
     public class DisplayDepthImage : MonoBehaviour
     {
+
+        [SerializeField]
+        ARCameraBackground cameraBackground;
+
+
         /// <summary>
         /// The display mode for the texture widget. Values must match the UI dropdown.
         /// </summary>
@@ -430,7 +435,15 @@ namespace UnityEngine.XR.ARFoundation.Samples
             m_RawImage.rectTransform.sizeDelta = rectSize;
             material.SetFloat(k_MaxDistanceId, maxDistance);
             material.SetMatrix(k_DisplayRotationPerFrameId, m_DisplayRotationMatrix);
-            m_RawImage.material = material;
+
+
+
+            
+
+            m_RawImage.material.SetTexture("Texture 1", material.mainTexture);
+
+            m_RawImage.material.SetTexture("Texture 2", cameraBackground.material.mainTexture);
+
         }
 
         /// <summary>
